@@ -9,6 +9,7 @@ $admonition-background: () !default;
 $admonition-body-color: () !default;
 $admonition-header-background: () !default;
 $admonition-header-color: () !default;
+$admonition-border-color: () !default;
 @each $name, $color in $admonition-colors {
   $bg: lighten-color($color, 5);
   @if not map-has-key($admonition-header-background, $name) {
@@ -16,6 +17,9 @@ $admonition-header-color: () !default;
   }
   @if not map-has-key($admonition-header-color, $name) {
     $admonition-header-color: map-merge($admonition-header-color, ($name: findColorInvert($color))) !global;
+  }
+  @if not map-has-key($admonition-border-color, $name) {
+    $admonition-border-color: map-merge($admonition-border-color, ($name: $color)) !global;
   }
   @if not map-has-key($admonition-background, $name) {
     $admonition-background: map-merge($admonition-background, ($name: $bg)) !global;
@@ -31,7 +35,7 @@ $admonition-header-color: () !default;
   background-color: map-get($admonition-background, 'default');
   border-style: solid;
   border-width: 1px;
-  border-color: map-get($admonition-header-background, 'default');
+  border-color: map-get($admonition-border-color, 'default');
   border-radius: $message-radius;
   font-size: $size-normal;
 
@@ -60,7 +64,7 @@ $admonition-header-color: () !default;
 
     &.is-#{$name} {
       background-color: map-get($admonition-background, $name);
-      border-color: map-get($admonition-header-background, $name);
+      border-color: map-get($admonition-border-color, $name);
 
       > .admonition-header {
         background-color: map-get($admonition-header-background, $name);
