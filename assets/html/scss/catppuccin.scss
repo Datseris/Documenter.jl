@@ -125,9 +125,11 @@ $modal-card-body-background-color: $catppuccin-base;
 $search-modal-selected-filter-color: $catppuccin-surface0;
 $search-modal-selected-filter-background-color: $catppuccin-lavender;
 
-
 // Sidebar
 $documenter-sidebar-menu-active-background: $catppuccin-crust;
+
+// Headings (TODO: Subheadings should have slightly different color)
+$content-heading-color: $catppuccin-text;
 
 // All secondary themes have to be nested in a theme--$(themename) class. When Documenter
 // switches themes, it applies this class to <html> and then disables the primary
