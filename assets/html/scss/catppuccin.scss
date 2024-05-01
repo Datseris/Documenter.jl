@@ -169,10 +169,9 @@ html.theme--#{$themename} {
 
   // Terminal colors guidelines:
   // https://github.com/catppuccin/catppuccin/blob/main/docs/style-guide.md#terminals
+  $ansi-black: $catppuccin-surface1;
   @if $themename == "catppuccin-latte" {
     $ansi-black: $catppuccin-subtext1;
-  } @else {
-    $ansi-black: $catppuccin-surface1;
   }
   $ansi-red: $catppuccin-red;
   $ansi-green: $catppuccin-green;
@@ -180,16 +179,14 @@ html.theme--#{$themename} {
   $ansi-blue: $catppuccin-blue;
   $ansi-magenta: $catppuccin-pink;
   $ansi-cyan: $catppuccin-teal;
+  $ansi-white: $catppuccin-subtext1;
   @if $themename == "catppuccin-latte" {
     $ansi-white: $catppuccin-surface2;
-  } @else {
-    $ansi-white: $catppuccin-subtext1;
   }
 
+  $ansi-light-black: $catppuccin-surface2;
   @if $themename == "catppuccin-latte" {
     $ansi-light-black: $catppuccin-subtext0;
-  } @else {
-    $ansi-light-black: $catppuccin-surface2;
   }
   $ansi-light-red: $catppuccin-red;
   $ansi-light-green: $catppuccin-green;
@@ -197,10 +194,9 @@ html.theme--#{$themename} {
   $ansi-light-blue: $catppuccin-blue;
   $ansi-light-magenta: $catppuccin-pink;
   $ansi-light-cyan: $catppuccin-teal;
+  $ansi-light-white: $catppuccin-subtext0;
   @if $themename == "catppuccin-latte" {
     $ansi-light-white: $catppuccin-surface1;
-  } @else {
-    $ansi-light-white: $catppuccin-subtext0;
   }
   @import "documenter/ansicolors";
 
