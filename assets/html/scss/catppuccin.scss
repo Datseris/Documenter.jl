@@ -1,4 +1,4 @@
-// This file needs to be templated with CATPPUCCIN_FLAVOR
+// This file needs to be templated with CATPPUCCIN_FLAVOR and IS_DARK_THEME
 
 @charset "UTF-8";
 
@@ -13,7 +13,7 @@ $body-size: 16px;
 $size-6: 1rem;
 $size-7: 0.75rem;
 
-$documenter-is-dark-theme: true;
+$documenter-is-dark-theme: ${IS_DARK_THEME};
 
 // Darkly sets the font variables, so we need to override them here
 $family-sans-serif: 'Lato Medium', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -148,9 +148,6 @@ html.theme--#{$themename} {
   @import "documenter/elements";
   @import "documenter/components/all";
   @import "documenter/patches";
-  a:hover code {
-    color: $catppuccin-sky;
-  }
   @import "documenter/layout/all";
 
   @import "documenter/theme_overrides";

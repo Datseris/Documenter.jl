@@ -11,7 +11,8 @@ catppuccin: themes/catppuccin-latte.css themes/catppuccin-frappe.css \
 
 # Template the flavor
 scss/catppuccin-%.scss: scss/catppuccin.scss
-	CATPPUCCIN_FLAVOR=$* envsubst '$${CATPPUCCIN_FLAVOR}' < $< > $@
+	IS_DARK_THEME=$$(if [ "$*" = "latte" ]; then echo false; else echo true; fi) \
+	CATPPUCCIN_FLAVOR=$* envsubst '$${IS_DARK_THEME} $${CATPPUCCIN_FLAVOR}' < $< > $@
 
 # Compile the themes
 themes/catppuccin-%.css: scss/catppuccin-%.scss scss/catppuccin/_%.scss \
