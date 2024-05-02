@@ -1,5 +1,3 @@
-/* https://github.com/jenil/bulmaswatch/blob/v0.8.1/darkly/_variables.scss */
-// @import "catppuccin/mocha";
 $grey-lighter: $catppuccin-overlay1;// #dbdee0;
 $grey-light: $catppuccin-overlay0;
 $grey: $catppuccin-surface2;
@@ -69,7 +67,7 @@ $button-disabled-background-color: $grey-light;
 $input-color: $grey-darker;
 $input-icon-color: $grey;
 $input-icon-active-color: $input-color;
-$input-hover-color: $grey-light;
+$input-hover-color: $catppuccin-sky;
 $input-disabled-background-color: $grey-light;
 $input-disabled-border: $grey-lighter;
 

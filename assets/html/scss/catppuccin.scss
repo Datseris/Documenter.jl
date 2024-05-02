@@ -120,6 +120,7 @@ $button-static-border-color: $border;
 
 // $modal-background-background-color: $catppuccin-sapphire;
 $modal-card-body-background-color: $catppuccin-base;
+$modal-card-title-color: $catppuccin-text;
 
 // Search
 $search-modal-selected-filter-color: $catppuccin-surface0;
@@ -145,7 +146,6 @@ html.theme--#{$themename} {
   @import "bulma/grid/all";
   @import "bulma/layout/all";
 
-  // @import "darkly/overrides";
 
   @import "documenter/elements";
   @import "documenter/components/all";
@@ -153,6 +153,8 @@ html.theme--#{$themename} {
   @import "documenter/layout/all";
 
   @import "documenter/theme_overrides";
+
+  @import "catppuccin/overrides";
 
   // .docstring {
   //   border: $border-width solid $border;
@@ -239,7 +241,7 @@ html.theme--#{$themename} {
 
   .search-result-highlight {
     background-color: $catppuccin-red;
-    color: black;
+    color: $catppuccin-mantle;
   }
 
   .search-divider {
