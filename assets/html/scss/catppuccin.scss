@@ -166,8 +166,14 @@ html.theme--#{$themename} {
   //     border-radius: $radius $radius 0 0;
   //   }
   // }
+
+  // Source link in docstrings
+  // .docstring > section > a.docs-sourcelink:not(body) {
   .docstring > section > a.docs-sourcelink:not(body) {
-      // background-color: #89b4fa;
+      color: $catppuccin-surface0;
+  }
+  // Footnote backlink
+  .tag.is-link:not(body) {
       color: $catppuccin-surface0;
   }
 
